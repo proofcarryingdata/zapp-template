@@ -15,8 +15,8 @@ dependencies:
     specifier: ^0.11.4
     version: 0.11.4
   '@pcd/zupass-client':
-    specifier: ^0.0.1
-    version: 0.0.1
+    specifier: ^0.0.2
+    version: 0.0.2
   react:
     specifier: ^18.3.1
     version: 18.3.1
@@ -477,12 +477,12 @@ packages:
       fastq: 1.17.1
     dev: true
 
-  /@pcd/gpc-pcd@0.0.5:
-    resolution: {integrity: sha512-CCqeD/llDp7m7TE9xF8O6DeVZSbg2YRGJahrVO9wKdv6qiqnKLtADyZp/BwfKxxUOfT5DMT8jSNsh3lMTpQvGg==}
+  /@pcd/gpc-pcd@0.0.6:
+    resolution: {integrity: sha512-9DE+SQ0SSkvgxIskS0yOA9siZvAMhyvM+XkKK/suJiOky/Yb6oNonlVp35G4jh7q5BSOHAS/v7oOvgfuZDthlA==}
     dependencies:
-      '@pcd/gpc': 0.0.5
+      '@pcd/gpc': 0.0.6
       '@pcd/pcd-types': 0.11.4
-      '@pcd/pod-pcd': 0.1.4
+      '@pcd/pod-pcd': 0.1.5
       '@pcd/semaphore-identity-pcd': 0.11.4
       '@pcd/util': 0.5.3
       '@types/lodash': 4.17.7
@@ -491,11 +491,11 @@ packages:
       uuid: 9.0.1
     dev: false
 
-  /@pcd/gpc@0.0.5:
-    resolution: {integrity: sha512-zcfLSam34XOOZbBkefHBNSzDYNo3IgZHNGSPfp5gbBDx525n77UT2n+YVH39i4UqQnxOGaEHy4KTrNTmbG5EEg==}
+  /@pcd/gpc@0.0.6:
+    resolution: {integrity: sha512-qlN1895ZBsY7cjikNbgxMG2V+2PsnHgvaew2f1tEB6HmJaEiYdPi/cP+fJgKrLqPmDA37p8aOx4CUq+k/do6aA==}
     dependencies:
-      '@pcd/gpcircuits': 0.1.4
-      '@pcd/pod': 0.1.4
+      '@pcd/gpcircuits': 0.1.5
+      '@pcd/pod': 0.1.5
       '@pcd/util': 0.5.3
       '@semaphore-protocol/identity': 3.15.2
       '@types/lodash': 4.17.7
@@ -504,31 +504,17 @@ packages:
       url-join: 4.0.1
     dev: false
 
-  /@pcd/gpcircuits@0.1.4:
-    resolution: {integrity: sha512-UNEVfM5jPFIVa46xWTMrPDlSZQXHSshA4FmxdW1NXFJQWRYQ8qnM1Au/D74dJz7qhoX0hgQLds+uo/CK757Hcg==}
+  /@pcd/gpcircuits@0.1.5:
+    resolution: {integrity: sha512-Ivlzyu8+flgOUmq/N+mWw1y6bvzY58HLjI1KAFPxOsGI3evVStrgg5j91z80rRJJK50ohG6aL5lX59zG4sV3YA==}
     dependencies:
-      '@pcd/pod': 0.1.4
+      '@pcd/pod': 0.1.5
       fastfile: 0.0.20
       snarkjs: 0.7.4
       url-join: 4.0.1
     dev: false
 
-  /@pcd/pcd-types@0.11.1:
-    resolution: {integrity: sha512-wTjeMuglVNf2JiwNiedgzstbrKOLqKs3g3MdZ12HRaGHehtFDIZXNwFxVP6tkNzrmm3zXyAnp8qqzYDOHTKmPw==}
-    dev: false
-
   /@pcd/pcd-types@0.11.4:
     resolution: {integrity: sha512-IxPzs5dFc9O7mtcusbEMNln3lWtoyMkxPLbcJTbmlR+HGURNxDR5ZumXlXTOv8LL1OwkY1TaU1EkrhXVnVWdNA==}
-    dev: false
-
-  /@pcd/pod-pcd@0.1.4:
-    resolution: {integrity: sha512-ZKtCs9pikZc9Qg6snq9oRrRTGYRP84Uw6Ljb2409x5qy0n8Pc+VwUvNdSAQVzIACDMnIU2fkzRUdoczCkbGiiA==}
-    dependencies:
-      '@pcd/pcd-types': 0.11.4
-      '@pcd/pod': 0.1.4
-      '@pcd/util': 0.5.3
-      json-bigint: 1.0.0
-      uuid: 9.0.1
     dev: false
 
   /@pcd/pod-pcd@0.1.5:
@@ -539,19 +525,6 @@ packages:
       '@pcd/util': 0.5.3
       json-bigint: 1.0.0
       uuid: 9.0.1
-    dev: false
-
-  /@pcd/pod@0.1.4:
-    resolution: {integrity: sha512-mYD0AwE1JAFIuZQ8plJKZkbH9I2TFYxNp9B3pbdCnaycP0SWw8YJK0+kaWMItovzcAitYDC3ISYTf40hWMz7Xg==}
-    dependencies:
-      '@pcd/util': 0.5.3
-      '@zk-kit/baby-jubjub': 1.0.1
-      '@zk-kit/eddsa-poseidon': 1.0.2
-      '@zk-kit/lean-imt': 2.0.1
-      '@zk-kit/utils': 1.2.0
-      js-sha256: 0.10.1
-      json-bigint: 1.0.0
-      poseidon-lite: 0.2.1
     dev: false
 
   /@pcd/pod@0.1.5:
@@ -587,11 +560,11 @@ packages:
       uuid: 9.0.1
     dev: false
 
-  /@pcd/zupass-client@0.0.1:
-    resolution: {integrity: sha512-IuR6EZqyxrW9Z/MXy9PnqYNTyUc7GCJ/LLfWJeYammlTeCA3PR2ckTu+AOwikdCcZiq1z6ISlvt1VhHOVGeDdw==}
+  /@pcd/zupass-client@0.0.2:
+    resolution: {integrity: sha512-lAskzi7epZSdoFW86Xpjv+du0bGJeH2Y8FYLKNtDxQUOJJnsk4hM9/eJZNqzQdtfh8NeJ7+RDrMWNN5ivNsAag==}
     dependencies:
-      '@pcd/gpc-pcd': 0.0.5
-      '@pcd/pcd-types': 0.11.1
+      '@pcd/gpc-pcd': 0.0.6
+      '@pcd/pcd-types': 0.11.4
       zod: 3.23.8
     dev: false
 
