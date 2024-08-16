@@ -1,9 +1,7 @@
 import { EmbeddedZupassProvider } from "./hooks/useEmbeddedZupass";
 import { Navbar } from "./components/Navbar";
-import { GPC } from "./apis/GPC";
 import { FileSystem } from "./apis/FileSystem";
 import { ZUPASS_URL } from "./constants";
-import { Identity } from "./apis/Identity";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Header } from "./components/Header";
 
@@ -23,8 +21,6 @@ function App() {
           <Header />
           <div className="flex flex-col gap-4 my-4">
             <FileSystem />
-            <GPC />
-            <Identity />
           </div>
         </div>
       </EmbeddedZupassProvider>
