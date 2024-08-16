@@ -14,7 +14,7 @@ const zapp = {
 
 function App() {
   const { connected } = useEmbeddedZupass();
-  const zupassUrl = window.localStorage.getItem("zupassUrl") || ZUPASS_URL;
+  const zupassUrl = localStorage.getItem("zupassUrl") || ZUPASS_URL;
 
   return (
     <EmbeddedZupassProvider zapp={zapp} zupassUrl={zupassUrl}>

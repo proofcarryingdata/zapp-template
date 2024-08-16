@@ -2,16 +2,19 @@ import { ReactNode, useCallback, useState } from "react";
 import { HiLightningBolt } from "react-icons/hi";
 import { ZUPASS_URL } from "../constants";
 import { cn } from "../utils";
+import { useEmbeddedZupass } from "../hooks/useEmbeddedZupass";
 
-export function Navbar({ connecting }: { connecting: boolean }): ReactNode {
-  const zupassUrl = window.localStorage.getItem("zupassUrl") || ZUPASS_URL;
+export function Navbar(): ReactNode {
+  const { connected } = useEmbeddedZupass();
+  const connecting = !connected;
+  const zupassUrl = localStorage.getItem("zupassUrl") || ZUPASS_URL;
 
   const [inputZupassUrl, setInputZupassUrl] = useState(zupassUrl);
 
   const onSave = useCallback(
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.preventDefault();
-      window.localStorage.setItem("zupassUrl", inputZupassUrl);
+      localStorage.setItem("zupassUrl", inputZupassUrl);
       window.location.reload();
     },
     [inputZupassUrl]

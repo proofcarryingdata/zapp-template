@@ -14,7 +14,7 @@ export function FileSystem(): ReactNode {
   const [pcd, setPCD] = useState<SerializedPCD>();
   const [pcdAdded, setPCDAdded] = useState(false);
   const zupassUrl = useMemo(() => {
-    return window.localStorage.getItem("zupassUrl") || ZUPASS_URL;
+    return localStorage.getItem("zupassUrl") || ZUPASS_URL;
   }, []);
 
   const pcdId = useMemo(() => {
