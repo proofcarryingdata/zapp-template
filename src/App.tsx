@@ -1,11 +1,9 @@
-import {
-  EmbeddedZupassProvider,
-  useEmbeddedZupass,
-} from "./hooks/useEmbeddedZupass";
+import { EmbeddedZupassProvider } from "./hooks/useEmbeddedZupass";
 import { Navbar } from "./components/Navbar";
 import { GPC } from "./apis/GPC";
 import { FileSystem } from "./apis/FileSystem";
 import { ZUPASS_URL } from "./constants";
+import { Identity } from "./apis/Identity";
 
 const zapp = {
   name: "test-client",
@@ -13,18 +11,17 @@ const zapp = {
 };
 
 function App() {
-  const { connected } = useEmbeddedZupass();
   const zupassUrl = localStorage.getItem("zupassUrl") || ZUPASS_URL;
 
   return (
     <EmbeddedZupassProvider zapp={zapp} zupassUrl={zupassUrl}>
-      <Navbar connecting={!connected} />
+      <Navbar />
       <div className="container mx-auto my-4 p-4">
         <p>You can use this page to test the embedded Zupass API.</p>
         <div className="flex flex-col gap-4 my-4">
           <FileSystem />
           <GPC />
-          {/* <Identity /> */}
+          <Identity />
         </div>
       </div>
     </EmbeddedZupassProvider>

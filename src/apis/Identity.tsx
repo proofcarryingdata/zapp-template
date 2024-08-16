@@ -32,7 +32,9 @@ export function Identity(): ReactNode {
             }}
             label="Get identity commitment"
           />
-          {commitment && <p>Commitment: {commitment.toString()}</p>}
+          {commitment !== undefined && (
+            <p>Commitment: {commitment.toString()}</p>
+          )}
         </div>
         <div>
           <p>
